@@ -46,11 +46,11 @@ Erst auf einer getrennten Testkopie wiederherstellen und fachlich prüfen. Ein C
 
 ## Versionierte Abhängigkeiten
 
-SHA-256 der gesicherten Lock-/Requirements-Dateien:
+SHA-256 der gesicherten Lock-/Requirements-Dateien nach Normalisierung von CRLF auf LF:
 
 | Datei | SHA-256 |
 |---|---|
-| `package-lock.json` | `778117f4cae7b0a980e042a11bf7e51489414c9b67fcd64060d7fca234467478` |
+| `package-lock.json` | `559884b8b087723f991d6ab753bcf5b01fb765f51acd3b359e78145fcd80a0d2` |
 
 ## Vertiefende vorhandene Anleitungen
 

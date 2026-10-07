@@ -78,7 +78,7 @@ Cloudflare-Tunnel (siehe PROJEKT.md).
 
 ## Prüfungen
 
-Die CI verwendet Node.js 22. Im eingerichteten VM-Checkout: `npm ci`, `npm run check`, `npm test` und `npm run build`. Für Browser-Smoke-Tests zusätzlich Playwright installieren und `npm run test:e2e` ausführen. Ein historisches Testergebnis ist kein Ersatz für einen erneuten Lauf nach Änderungen.
+Das Manifest verlangt Node.js 24.x. Einzelne ältere Deployment-Workflows können noch Node 22 nennen; vor einer Veröffentlichung die Laufzeitvorgaben mit dem aktuellen Manifest abgleichen. Im eingerichteten VM-Checkout: `npm ci`, `npm run check`, `npm test` und `npm run build`. Für Browser-Smoke-Tests zusätzlich Playwright installieren und `npm run test:e2e` ausführen. Ein historisches Testergebnis ist kein Ersatz für einen erneuten Lauf nach Änderungen.
 
 ## Bestandsprüfung
 

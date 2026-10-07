@@ -1,3 +1,5 @@
+> **Historischer Audit:** Die folgenden Befunde/Tests beziehen sich auf den hier genannten früheren Audit-Commit. Für den PC-Checkpoint vom 07.10.2026 sind [REBUILD.md](REBUILD.md) und das zentrale playbooks-Manifest maßgeblich. Die technische Abnahme dieses neuen Checkpoints ist separat auszuführen.
+
 # Repository-Status – alltags-helfer
 
 **Bestandsprüfung: 07.10.2026**
