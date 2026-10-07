@@ -87,6 +87,6 @@ Für die aus diesem Repository abgefragten festen Python-/Rust-Versionen wurden 
 
 ## Umfang und Grenzen
 
-Geprüft wurden alle eigenen GitHub-Repositories aus der paginierten Owner-Liste, jeweils der Standardbranch; andere Branches wurden auf Git-Abweichungen verglichen, nicht vollständig erneut als Anwendungen getestet. Betriebszustände externer Provider, personenbezogene Inhalte, Vertrags-/Datenschutztexte und rechtliche Regelkataloge sind nicht fachlich neu abgenommen. Es wurden keine Deployments, Live-Zahlungen, Posts, Mails oder kostenpflichtigen KI-Jobs ausgelöst.
+Geprüft wurden alle eigenen GitHub-Repositories aus der paginierten Owner-Liste, jeweils der Standardbranch; andere Branches wurden auf Git-Abweichungen verglichen, nicht vollständig erneut als Anwendungen getestet. Betriebszustände externer Provider, personenbezogene Inhalte, Vertrags-/Datenschutztexte und rechtliche Regelkataloge sind nicht fachlich neu abgenommen. Bei der Bestandsprüfung wurden keine Produktivdeployments, Live-Zahlungen, Posts, Mails oder kostenpflichtigen KI-Jobs manuell gestartet. Die Dokumentations-PRs können vorhandene automatische CI- und Vorschau-Deployments auslösen; deren Ergebnisse sind separat vom geprüften Code-Snapshot zu bewerten.
 
 Quellen: Repository-Dateien am oben verlinkten Commit, [GitHub Actions](https://github.com/Ernestokoeber/alltags-helfer/actions), Paketregistries und [OSV](https://osv.dev/). Bei erneuter Prüfung Snapshot, Tests, CI-Zuordnung und Audits gemeinsam aktualisieren.
