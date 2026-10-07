@@ -20,12 +20,12 @@ offline-fähig), Inline-SVG-Icons statt Emojis.
 
 - **Client:** SvelteKit als PWA, lokale Daten via IndexedDB (Dexie)
 - **Spracheingabe:** OS-Diktat (on-device)
-- **Server (spät):** Axum (Rust), self-hosted — Web-Push + Geräte-Sync
+- **Sync/Push-Backend:** Cloudflare Worker + D1 unter `sync-worker/`; Ende-zu-Ende-verschlüsselte Sync-Daten und generische Push-Erinnerungen. Axum/Rust ist im aktuellen Repository nicht implementiert.
 
 ## Status
 
 In Umsetzung — alle 6 Tabs funktional, **installierbare PWA** (Service Worker +
-Offline), **172 Unit-Tests grün** + **E2E-Smoke (Playwright)**. Changelog/Details in **[PROJEKT.md](./PROJEKT.md)**
+Offline), **Unit-/Komponententests (Vitest)** + **E2E-Smoke (Playwright)**. Changelog/Details in **[PROJEKT.md](./PROJEKT.md)**
 (Abschnitt „Umgesetzt").
 
 **Funktionen:** globale Sphären-Sicht Privat/Arbeit/Alles (in localStorage gemerkt),
@@ -75,3 +75,11 @@ Das Skript stellt den `node_modules`-Bind sicher (nötig nach jedem VM-Neustart)
 startet Vite. Hinweis: PWA-Features (Service Worker, Installation, Push) brauchen
 HTTPS oder `localhost` — fürs Testen auf echten Geräten später via `mkcert` oder
 Cloudflare-Tunnel (siehe PROJEKT.md).
+
+## Prüfungen
+
+Die CI verwendet Node.js 22. Im eingerichteten VM-Checkout: `npm ci`, `npm run check`, `npm test` und `npm run build`. Für Browser-Smoke-Tests zusätzlich Playwright installieren und `npm run test:e2e` ausführen. Ein historisches Testergebnis ist kein Ersatz für einen erneuten Lauf nach Änderungen.
+
+## Bestandsprüfung
+
+Code-/Dokumentationsabgleich, geprüfter Commit, CI-Zuordnung, Branch-Abweichungen und Dependency-Befunde vom **07.10.2026**: [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md).
