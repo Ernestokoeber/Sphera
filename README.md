@@ -83,3 +83,7 @@ Die CI verwendet Node.js 22. Im eingerichteten VM-Checkout: `npm ci`, `npm run c
 ## Bestandsprüfung
 
 Code-/Dokumentationsabgleich, geprüfter Commit, CI-Zuordnung, Branch-Abweichungen und Dependency-Befunde vom **07.10.2026**: [REPOSITORY_STATUS.md](REPOSITORY_STATUS.md).
+
+## Zuhause nachbauen
+
+Gemeinsamer PC-Stand, Voraussetzungen, Start, Prüfungen und getrennte Datensicherung: [REBUILD.md](REBUILD.md). Zentraler Einstieg: `Ernestokoeber/playbooks`, Branch `docs/repository-audit-2026-10-07`, `rebuild/HOME_SETUP.md`.
