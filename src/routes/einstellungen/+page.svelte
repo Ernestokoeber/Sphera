@@ -13,7 +13,7 @@
 		const url = URL.createObjectURL(blob);
 		const a = document.createElement('a');
 		a.href = url;
-		a.download = `alltags-helfer-backup-${datum}.json`;
+		a.download = `sphera-backup-${datum}.json`;
 		a.click();
 		URL.revokeObjectURL(url);
 	}

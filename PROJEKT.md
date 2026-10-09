@@ -1,6 +1,6 @@
 # Sphera — Projektplan
 
-> **App-Name:** **Sphera** (intern/technisch weiterhin `alltags-helfer`: Dexie-DB, `BACKUP_APP`, Worker-Name, npm-Paket — bewusst unverändert, sonst Datenverlust/Bruch).
+> **App und Repository:** **Sphera**, npm-Paket `sphera`. Die bestehenden Speicher- und Sync-Kennungen (`alltags-helfer`: Dexie-DB, `BACKUP_APP`, Worker-Name) bleiben aus Kompatibilitätsgründen erhalten.
 
 > **Stand:** 2026-06-24 · **Owner:** Ernestokoeber · **Status:** live auf GitHub Pages; ergänzt: Projekt-Hierarchie + Aufgaben, responsives Desktop-Layout, **Geräte-Sync (E2EE, Handy⇄PC bestätigt; jetzt auch sofort nach jeder Änderung)**, In-App-Erinnerungen, Markdown-Notizen, globale Suche, **Kalender + wiederkehrende Termine/Aufgaben**, **generische Push-Erinnerungen (E2EE-konform)**, **eigener Aufgaben-Tab**, **Arbeitsbereich (Kollegen-Notizen + Kundensupport)** und **Anheft-Bereich (Pins) im Arbeit-Tab**, **sanfter Heute-Tipp**, **E2E-Smoke (Playwright)** und **Tracking-Tab (Zeit-/Lern-Erfassung + Dashboard)**; **iPhone-Push on-device bestätigt**; **Bucketlist/Schlaf entfernt**
 

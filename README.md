@@ -46,10 +46,10 @@ offline-fähig, `storage.persist()` + Warnung bei blockierter IndexedDB.
 
 Jeder Push auf `main` baut und veröffentlicht die PWA automatisch über
 `.github/workflows/deploy.yml` nach **GitHub Pages**:
-`https://ernestokoeber.github.io/alltags-helfer/` — von dort lässt sie sich am
+`https://ernestokoeber.github.io/Sphera/` — von dort lässt sie sich am
 Handy „Zum Home-Bildschirm hinzufügen" (installierbare PWA, offline-fähig).
 
-Technik: Der Workflow setzt `BASE_PATH=/alltags-helfer` (→ `paths.base` in
+Technik: Der Workflow setzt `BASE_PATH=/Sphera` (→ `paths.base` in
 `svelte.config.js`), die Routen werden als Client-Shells prerendert und
 `404.html` dient als SPA-Fallback für unbekannte Pfade. Hinweis: Auf dem
 GitHub-Free-Plan funktioniert Pages nur bei **öffentlichen** Repos.
