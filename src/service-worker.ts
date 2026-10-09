@@ -11,8 +11,10 @@ import { base, build, files, prerendered, version } from '$service-worker';
 // `self` ist im Worker-Kontext der ServiceWorkerGlobalScope.
 const sw = self as unknown as ServiceWorkerGlobalScope;
 
-// Pro Version ein eigener Cache → alte Versionen werden beim Activate entfernt.
-const CACHE = `alltags-helfer-${version}`;
+// Eigene Caches pro App-Pfad und Version. Die alte Handy-Adresse und /Sphera
+// dürfen sich beim Aktualisieren nicht gegenseitig die Offline-Dateien löschen.
+const CACHE_PREFIX = `sphera:${base || '/'}:`;
+const CACHE = `${CACHE_PREFIX}${version}`;
 
 // Gebaute App-Dateien (immutable, versioniert) + statische Assets
 // + prerenderte Routen-Shells (damit Deep-Links auch offline laden).
@@ -40,7 +42,7 @@ sw.addEventListener('install', (event) => {
 sw.addEventListener('activate', (event) => {
 	async function cleanup() {
 		for (const key of await caches.keys()) {
-			if (key !== CACHE) await caches.delete(key);
+			if (key.startsWith(CACHE_PREFIX) && key !== CACHE) await caches.delete(key);
 		}
 		await sw.clients.claim();
 	}
