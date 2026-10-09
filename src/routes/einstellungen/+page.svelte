@@ -46,6 +46,7 @@
 	let syncCode = $state(cfg.code);
 	let e2eePass = $state(cfg.passphrase);
 	let eingerichtet = $state(isConfigured());
+	let zeigeSyncCode = $state(false);
 	let zeigePass = $state(false);
 
 	async function syncEinrichten() {
@@ -146,11 +147,23 @@
 			Passwort verlässt dein Gerät nie und liegt auch nicht auf dem Server.
 		</p>
 
-		<label class="flex flex-col gap-1 text-xs text-zinc-400">
-			Sync-Code
+		<div class="flex flex-col gap-1 text-xs text-zinc-400">
+			<div class="flex items-center justify-between">
+				<label for="sync-code">Sync-Code</label>
+				<button
+					type="button"
+					onclick={() => (zeigeSyncCode = !zeigeSyncCode)}
+					aria-label={zeigeSyncCode ? 'Sync-Code verbergen' : 'Sync-Code anzeigen'}
+					aria-pressed={zeigeSyncCode}
+					class="text-zinc-500 transition-colors hover:text-zinc-300"
+				>
+					{zeigeSyncCode ? 'verbergen' : 'anzeigen'}
+				</button>
+			</div>
 			<input
+				id="sync-code"
 				bind:value={syncCode}
-				type="password"
+				type={zeigeSyncCode ? 'text' : 'password'}
 				autocomplete="off"
 				autocapitalize="none"
 				autocorrect="off"
@@ -158,7 +171,7 @@
 				placeholder="Sync-Code"
 				class="field"
 			/>
-		</label>
+		</div>
 		<div class="flex flex-col gap-1 text-xs text-zinc-400">
 			<div class="flex items-center justify-between">
 				<span>E2EE-Passwort (auf allen Geräten gleich)</span>
